@@ -25,7 +25,7 @@
                     <li class = "nav-item"><a class = "nav-link" href ="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id = "loginButton">
                     <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
@@ -81,10 +81,12 @@
                     <!--<a role="button" class="btn btn-block nav-link btn-warning"
                         data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
                         data-placement="bottom" href="#Reservation">Reserve Table
-                    </a>-->
+                    </a>
                     <a role="button" class="btn btn-block nav-link btn-warning" 
                     data-toggle="modal" data-target="#Reservation"
-                    href="#Reservation">Reserve Table</a>
+                    href="#Reservation">Reserve Table</a>-->
+                    <a role="button" class="btn btn-block nav-link btn-warning"  id = "reserveButton">Reserve Table</a>
+
                 </div>
             </div>
         </div>
@@ -403,6 +405,12 @@
                 $("#carouselButton").children("span").removeClass('fa-play');
                 $("#carouselButton").children("span").addClass('fa-pause');                    
             }
+        });
+        $("#reserveButton").click(function(){
+            $('#Reservation').modal('show');
+        });
+        $("#loginButton").click(function(){
+            $('#loginModal').modal('show');
         });
     </script>
 </body>
